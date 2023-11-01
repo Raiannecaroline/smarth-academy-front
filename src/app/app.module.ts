@@ -10,6 +10,7 @@ import { FluxoPessoasComponent } from './components/fluxo-pessoas/fluxo-pessoas.
 import { AparelhosHomeComponent } from './components/aparelhos-home/aparelhos-home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { MatCardModule } from '@angular/material/card';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,9 @@ import { MatCardModule } from '@angular/material/card';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts'), // or import('')
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

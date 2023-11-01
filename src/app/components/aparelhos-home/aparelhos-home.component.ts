@@ -4,7 +4,7 @@ import {MatCardModule} from '@angular/material/card';
 @Component({
   selector: 'app-aparelhos-home',
   templateUrl: './aparelhos-home.component.html',
-  styleUrls: ['./aparelhos-home.component.css']
+  styleUrls: ['./aparelhos-home.component.scss']
 })
 export class AparelhosHomeComponent implements OnInit {
 
