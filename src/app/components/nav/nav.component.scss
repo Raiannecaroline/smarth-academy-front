@@ -1,0 +1,38 @@
+.sidenav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(204, 201, 201, 0.2);
+}
+
+.sidenav {
+  width: 250px;
+  background-color: #444; /* Cor de fundo do menu lateral */
+  height: 100%; /* Para cobrir toda a altura da tela */
+  overflow: hidden;
+  display: none; /* Oculta o menu por padrão */
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidenav ul li {
+  padding: 10px;
+}
+
+.sidenav-content {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #1e1c1c; /* Cor do ícone do menu */
+  cursor: pointer;
+}

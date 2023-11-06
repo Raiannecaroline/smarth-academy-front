@@ -10,6 +10,13 @@ export class NavComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('NavComponent');
+  }
+
+  sidenavOpen = false;
+
+  toggleSidenav() {
+    this.sidenavOpen = !this.sidenavOpen;
   }
 
 }
