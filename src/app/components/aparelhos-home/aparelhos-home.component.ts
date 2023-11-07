@@ -13,4 +13,5 @@ export class AparelhosHomeComponent implements OnInit {
     console.log('AparelhosHomeComponent');
   }
 
+
 }
