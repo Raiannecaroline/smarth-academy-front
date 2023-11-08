@@ -1,19 +1,27 @@
-<div>
-  <a>&#8592;</a>
+<div class="box-icon">
+  <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">←</a>
 </div>
 
 <div>
   <a>Search</a>
 </div>
 
-<div>
-  <app-treinos></app-treinos>
-  <app-treinos></app-treinos>
-  <app-treinos></app-treinos>
-</div>
+<section>
+  <div class="box-treino">
+    <p>Tipos de Treino</p>
+    <p>Veja mais <a>&#10132;</a></p>
+  </div>
+  <div class="treinos-app">
+    <app-treinos style="width: 100%;"></app-treinos>
+  </div>
+</section>
 
-<div>
-  <p>Parceiros de Treino</p>
-  <p>Veja mais <a>&#10132;</a></p>
-  <app-parceiros></app-parceiros>
-</div>
+<section>
+  <div class="box-treino">
+    <p>Parceiros de Treino</p>
+    <p>Veja mais <a>&#10132;</a></p>
+  </div>
+  <div>
+    <app-parceiros></app-parceiros>
+  </div>
+</section>

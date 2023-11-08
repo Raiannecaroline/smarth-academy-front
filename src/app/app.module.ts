@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 import { AparelhosComponent } from './components/aparelhos/aparelhos.component';
 import { TreinosComponent } from './components/treinos/treinos.component';
 import { ParceirosComponent } from './components/parceiros/parceiros.component';
+import { LoginComponent } from './components/pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ParceirosComponent } from './components/parceiros/parceiros.component';
     AparelhosComponent,
     TreinosComponent,
     ParceirosComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
