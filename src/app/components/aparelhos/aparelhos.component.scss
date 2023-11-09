@@ -6,10 +6,10 @@
 }
 
 .treinos-app {
-  width: 400px;
+  width: 110vw;
   display: flex;
   justify-content: space-between;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .box-icon {
