@@ -10,6 +10,9 @@ import { AparelhosHomeComponent } from './components/aparelhos-home/aparelhos-ho
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { FluxoPessoasComponent } from './components/fluxo-pessoas/fluxo-pessoas.component';
 import { NavComponent } from './components/nav/nav.component';
+import { AparelhosComponent } from './components/aparelhos/aparelhos.component';
+import { TreinosComponent } from './components/treinos/treinos.component';
+import { ParceirosComponent } from './components/parceiros/parceiros.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { NavComponent } from './components/nav/nav.component';
     AparelhosHomeComponent,
     TimelineComponent,
     FluxoPessoasComponent,
-    NavComponent
+    NavComponent,
+    AparelhosComponent,
+    TreinosComponent,
+    ParceirosComponent
   ],
   imports: [
     BrowserModule,
