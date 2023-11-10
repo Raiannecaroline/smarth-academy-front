@@ -12,4 +12,5 @@ export class AparelhosHomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
 }

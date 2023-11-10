@@ -11,9 +11,20 @@
   left: 20px;
   z-index: 2;
   background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #FFC100;
   color: #333; /* Cor do ícone do menu */
   border: none;
   padding: 0;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu-button:focus {
+  transition: all 0.3s ease-in-out;
+  color: #FFC100; /* Cor do ícone do menu ao passar o mouse */
 }
 
 .sidenav {
@@ -36,6 +47,23 @@
 
 .sidenav ul li {
   margin: 20px 0;
+}
+
+.sidenav a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  border: 2px solid transparent; /* Adiciona uma borda transparente */
+  padding: 10px;
+  display: block;
+  transition: border 0.3s; /* Adiciona uma transição suave para a borda */
+}
+
+.sidenav a:hover,
+.sidenav a:focus {
+  border: 2px solid #FFC100; /* Adiciona uma borda amarela no hover ou foco */
+  border-radius: 5px; /* Opcional: arredonda as bordas da borda */
 }
 
 .sidenav.open {

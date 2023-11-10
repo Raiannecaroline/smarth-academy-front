@@ -12,4 +12,24 @@ export class TreinosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  treinoMessages: {[key: string]: boolean} = {
+    legDay: false,
+    superiores: false,
+    cardio: false
+  };
+
+  toggleTreinoMessage(tipoTreino: string) {
+    this.treinoMessages[tipoTreino] = !this.treinoMessages[tipoTreino];
+    console.log(this.treinoMessages);
+  }
+
+  showTreinoMessage(tipoTreino: string) {
+    this.treinoMessages[tipoTreino] = true;
+    console.log(this.treinoMessages);
+  }
+
+  hideTreinoMessage(tipoTreino: string) {
+    this.treinoMessages[tipoTreino] = false;
+    console.log(this.treinoMessages);
+  }
 }
