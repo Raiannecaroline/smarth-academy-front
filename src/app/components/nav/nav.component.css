@@ -1,0 +1,53 @@
+.sidenav-container {
+  display: flex;
+  align-items: center;
+}
+
+.menu-button {
+  cursor: pointer;
+  font-size: 24px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  background-color: transparent;
+  color: #333; /* Cor do ícone do menu */
+  border: none;
+  padding: 0;
+}
+
+.sidenav {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Inicialmente oculto */
+  background-color: #f2f2f2; /* Cor de fundo do menu */
+  overflow-x: hidden;
+  transition: 0.3s;
+  z-index: 1;
+  padding: 20px; /* Espaçamento dentro do menu */
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 40px;
+}
+
+.sidenav ul li {
+  margin: 20px 0;
+}
+
+.sidenav.open {
+  left: 0;
+}
+
+/* Estilo para o ícone "X" quando o menu está aberto */
+.sidenav.open + .sidenav-container .menu-button span:nth-child(2) {
+  display: block;
+}
+
+/* Estilo para ocultar o ícone do menu quando o menu está aberto */
+.sidenav.open + .sidenav-container .menu-button span:nth-child(1) {
+  display: none;
+}

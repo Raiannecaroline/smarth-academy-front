@@ -1,0 +1,34 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { HomeComponent } from './components/pages/home/home.component';
+import { LoginComponent } from './components/pages/login/login.component';
+import { AparelhosHomeComponent } from './components/aparelhos-home/aparelhos-home.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
+import { FluxoPessoasComponent } from './components/fluxo-pessoas/fluxo-pessoas.component';
+import { NavComponent } from './components/nav/nav.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    LoginComponent,
+    AparelhosHomeComponent,
+    TimelineComponent,
+    FluxoPessoasComponent,
+    NavComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts'),
+    }),
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

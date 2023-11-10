@@ -1,0 +1,15 @@
+<div class="sidenav-container">
+  <button class="menu-button" (click)="toggleSidenav()">
+    <span *ngIf="!isSidenavOpen">&#9776;</span>
+    <span *ngIf="isSidenavOpen">&times;</span>
+  </button>
+</div>
+
+<div class="sidenav" [class.open]="isSidenavOpen" (click)="closeSidenav()">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Aparelhos</a></li>
+    <li><a href="#">Especialistas</a></li>
+    <li><a href="#">Sair</a></li>
+  </ul>
+</div>
