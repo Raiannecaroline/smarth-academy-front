@@ -1,14 +1,20 @@
-<!-- Treinos -->
 <section class="treinos-box">
-  <div class="container-box-treino" (click)="toggleTreinoMessage('legDay')">
+  <div class="container-box-treino">
     <div class="box-treino-inner">
       <img
         class="box-treino-image"
         src="assets/image/legDay.png"
         alt="Treino"
+        [class.opacity-hidden]="treinoMessages['legDay']"
       />
       <div class="box-treino-icons">
-        <div><img src="assets/image/Play.png" alt="Play" /></div>
+        <div>
+          <img
+            src="assets/image/Play.png"
+            alt="Play"
+            (click)="toggleTreinoMessage('legDay')" routerLink="/detalhes-aparelhos"
+          />
+        </div>
         <button
           (mouseenter)="showTreinoMessage('legDay')"
           (mouseleave)="hideTreinoMessage('legDay')"
@@ -16,20 +22,29 @@
           <img src="assets/image/Reload.png" alt="Reload" />
         </button>
       </div>
-      <p class="treino-message" *ngIf="treinoMessages['legDay']">
+      <p class="treino-message text-card-black" *ngIf="treinoMessages['legDay']">
         Dia de Inferiores
       </p>
     </div>
   </div>
-  <div class="container-box-treino" (click)="toggleTreinoMessage('superiores')">
+
+  <!-- Outros cards -->
+  <div class="container-box-treino">
     <div class="box-treino-inner">
       <img
         class="box-treino-image"
         src="assets/image/superiores.png"
         alt="Treino"
+        [class.opacity-hidden]="treinoMessages['superiores']"
       />
       <div class="box-treino-icons">
-        <div><img src="assets/image/Play.png" alt="Play" /></div>
+        <div>
+          <img
+            src="assets/image/Play.png"
+            alt="Play"
+            (click)="toggleTreinoMessage('superiores')"
+          />
+        </div>
         <button
           (mouseenter)="showTreinoMessage('superiores')"
           (mouseleave)="hideTreinoMessage('superiores')"
@@ -37,20 +52,28 @@
           <img src="assets/image/Reload.png" alt="Reload" />
         </button>
       </div>
-      <p class="treino-message" *ngIf="treinoMessages['superiores']">
+      <p class="treino-message text-card-black" *ngIf="treinoMessages['superiores']">
         Dia de Superiores
       </p>
     </div>
   </div>
-  <div class="container-box-treino" (click)="toggleTreinoMessage('cardio')">
+
+  <div class="container-box-treino">
     <div class="box-treino-inner">
       <img
         class="box-treino-image"
         src="assets/image/cardio.png"
         alt="Treino"
+        [class.opacity-hidden]="treinoMessages['cardio']"
       />
       <div class="box-treino-icons">
-        <div><img src="assets/image/Play.png" alt="Play" /></div>
+        <div>
+          <img
+            src="assets/image/Play.png"
+            alt="Play"
+            (click)="toggleTreinoMessage('cardio')"
+          />
+        </div>
         <button
           (mouseenter)="showTreinoMessage('cardio')"
           (mouseleave)="hideTreinoMessage('cardio')"
@@ -58,7 +81,7 @@
           <img src="assets/image/Reload.png" alt="Reload" />
         </button>
       </div>
-      <p class="treino-message" *ngIf="treinoMessages['cardio']">
+      <p class="treino-message text-card-black" *ngIf="treinoMessages['cardio']">
         Dia de Cardio
       </p>
     </div>

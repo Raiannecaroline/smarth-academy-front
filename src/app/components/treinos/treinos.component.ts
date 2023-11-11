@@ -18,18 +18,33 @@ export class TreinosComponent implements OnInit {
     cardio: false
   };
 
-  toggleTreinoMessage(tipoTreino: string) {
-    this.treinoMessages[tipoTreino] = !this.treinoMessages[tipoTreino];
+  // toggleTreinoMessage(tipoTreino: string) {
+  //   this.treinoMessages[tipoTreino] = !this.treinoMessages[tipoTreino];
+  //   console.log(this.treinoMessages);
+  // }
+
+  // showTreinoMessage(tipoTreino: string) {
+  //   this.treinoMessages[tipoTreino] = true;
+  //   console.log(this.treinoMessages);
+  // }
+
+  // hideTreinoMessage(tipoTreino: string) {
+  //   this.treinoMessages[tipoTreino] = false;
+  //   console.log(this.treinoMessages);
+  // }
+
+  toggleTreinoMessage(treino: string) {
+    this.treinoMessages[treino] = !this.treinoMessages[treino];
     console.log(this.treinoMessages);
   }
 
-  showTreinoMessage(tipoTreino: string) {
-    this.treinoMessages[tipoTreino] = true;
+  showTreinoMessage(treino: string) {
+    this.treinoMessages[treino] = true;
     console.log(this.treinoMessages);
   }
 
-  hideTreinoMessage(tipoTreino: string) {
-    this.treinoMessages[tipoTreino] = false;
+  hideTreinoMessage(treino: string) {
+    this.treinoMessages[treino] = false;
     console.log(this.treinoMessages);
   }
 }

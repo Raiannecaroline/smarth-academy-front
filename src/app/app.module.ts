@@ -15,6 +15,8 @@ import { AparelhosComponent } from './components/aparelhos/aparelhos.component';
 import { TreinosComponent } from './components/treinos/treinos.component';
 import { ParceirosComponent } from './components/parceiros/parceiros.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DetalhesAparelhosComponent } from './components/detalhes-aparelhos/detalhes-aparelhos.component';
+import { DetalhesEspecialistasComponent } from './components/detalhes-especialistas/detalhes-especialistas.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
     NavComponent,
     AparelhosComponent,
     TreinosComponent,
-    ParceirosComponent
+    ParceirosComponent,
+    DetalhesAparelhosComponent,
+    DetalhesEspecialistasComponent
   ],
   imports: [
     BrowserModule,

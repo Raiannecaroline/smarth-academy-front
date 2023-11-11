@@ -5,6 +5,8 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { AparelhosComponent } from './components/aparelhos/aparelhos.component';
 import { ParceirosComponent } from './components/parceiros/parceiros.component';
 import { TreinosComponent } from './components/treinos/treinos.component';
+import { DetalhesAparelhosComponent } from './components/detalhes-aparelhos/detalhes-aparelhos.component';
+import { DetalhesEspecialistasComponent } from './components/detalhes-especialistas/detalhes-especialistas.component';
 
 const routes: Routes = [
   {
@@ -19,14 +21,22 @@ const routes: Routes = [
     path:'aparelhos',
     component: AparelhosComponent
   },
-  // {
-  //   path: '',
-  //   component: TreinosComponent
-  // },
-  // {
-  //   path: '',
-  //   component: ParceirosComponent
-  // }
+  {
+    path: 'aparelhos',
+    component: TreinosComponent
+  },
+  {
+    path: 'aparelhos',
+    component: ParceirosComponent
+  },
+  {
+    path: 'detalhes-aparelhos',
+    component: DetalhesAparelhosComponent
+  },
+  {
+    path: 'detalhes-especialistas',
+    component: DetalhesEspecialistasComponent
+  }
 ];
 
 @NgModule({

@@ -40,3 +40,13 @@
 .icon-bar:first-child {
   margin-top: 4px;
 }
+
+.opacity-hidden {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.text-card-black {
+  color: black; /* Define a cor do texto como preto */
+}
