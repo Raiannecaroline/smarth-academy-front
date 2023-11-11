@@ -8,7 +8,7 @@ import { TreinosComponent } from './components/treinos/treinos.component';
 
 const routes: Routes = [
   {
-    path: 'login',
+    path: '',
     component: LoginComponent
   },
   {
@@ -19,14 +19,14 @@ const routes: Routes = [
     path:'aparelhos',
     component: AparelhosComponent
   },
-  {
-    path: '',
-    component: TreinosComponent
-  },
-  {
-    path: '',
-    component: ParceirosComponent
-  }
+  // {
+  //   path: '',
+  //   component: TreinosComponent
+  // },
+  // {
+  //   path: '',
+  //   component: ParceirosComponent
+  // }
 ];
 
 @NgModule({

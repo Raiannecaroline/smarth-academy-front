@@ -1,1 +1,60 @@
+.bg-gradient {
+  background: linear-gradient(45deg, #0f4c81, #dd3290); /* Cores do gradiente */
+  background-size: 400% 400%; /* Tamanho do gradiente */
+  animation: gradientAnimation 20s infinite; /* Animação do gradiente */
+}
 
+/* Estilo do fundo de gradiente overlay (camada de luzes) */
+.bg-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Animação do gradiente */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+}
+
+/* Estilo do campo de senha com desfoque (blur) */
+.senha-input {
+  backdrop-filter: blur(5px); /* Aplica o efeito de desfoque */
+}
+
+/* Efeito de animação de desfoque */
+@keyframes blurAnimation {
+  0% {
+    backdrop-filter: blur(0);
+  }
+  100% {
+    backdrop-filter: blur(5px);
+  }
+}
+
+/* Aplica a animação de desfoque quando a senha estiver incorreta */
+.senha-incorreta .senha-input {
+  animation: blurAnimation 0.5s forwards;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typewriter h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter 4s steps(20) 1s 1 normal both;
+}

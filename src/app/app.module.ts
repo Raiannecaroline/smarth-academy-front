@@ -14,6 +14,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { AparelhosComponent } from './components/aparelhos/aparelhos.component';
 import { TreinosComponent } from './components/treinos/treinos.component';
 import { ParceirosComponent } from './components/parceiros/parceiros.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ParceirosComponent } from './components/parceiros/parceiros.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     NgxEchartsModule.forRoot({
