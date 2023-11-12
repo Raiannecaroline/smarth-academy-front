@@ -5,6 +5,7 @@ import { NgxEchartsDirective } from 'ngx-echarts';
 import * as echarts from 'echarts';
 import { AparelhosService } from 'src/app/service/aparelhos.service';
 import { Aparelhos } from 'src/app/models/aparelhos.models';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-aparelhos-home',
@@ -17,11 +18,12 @@ export class AparelhosHomeComponent implements OnInit {
   aparelho: Aparelhos[] = [];
 
   constructor(
-    private aparelhosService: AparelhosService
+    private aparelhosService: AparelhosService,
+    private http: HttpClient
   ) { }
 
   ngOnInit(): void {
-    this.getAparelhos(2);
+    this.getAparelhos(1);
   }
 
   getAparelhos(id: number) {

@@ -17,6 +17,8 @@ import { ParceirosComponent } from './components/parceiros/parceiros.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetalhesAparelhosComponent } from './components/detalhes-aparelhos/detalhes-aparelhos.component';
 import { DetalhesEspecialistasComponent } from './components/detalhes-especialistas/detalhes-especialistas.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { ModalModule } from './components/modal/modal.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,7 @@ import { DetalhesEspecialistasComponent } from './components/detalhes-especialis
     TreinosComponent,
     ParceirosComponent,
     DetalhesAparelhosComponent,
-    DetalhesEspecialistasComponent
+    DetalhesEspecialistasComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +43,7 @@ import { DetalhesEspecialistasComponent } from './components/detalhes-especialis
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts'),
     }),
+    ModalModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

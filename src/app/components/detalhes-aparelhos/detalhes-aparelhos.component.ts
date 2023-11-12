@@ -23,6 +23,7 @@ export class DetalhesAparelhosComponent implements OnInit {
 
 
   searchOpen = 'closed';
+  modalOpen = false;
 
   constructor() { }
 
@@ -31,6 +32,14 @@ export class DetalhesAparelhosComponent implements OnInit {
 
   toggleSearch() {
     this.searchOpen = this.searchOpen === 'closed' ? 'open' : 'closed';
+  }
+
+  openModal() {
+    this.modalOpen = true;
+  }
+
+  closeModal() {
+    this.modalOpen = false;
   }
 
 }

@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Aparelhos } from '../models/aparelhos.models';
 
-const baseUrl = 'http://icaroaurich.dyndns.org:8022/equip'
+const baseUrl = 'http://localhost:8022/equip'
 
 @Injectable({
   providedIn: 'root'
