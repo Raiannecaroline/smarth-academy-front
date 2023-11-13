@@ -1,5 +1,6 @@
+import { FluxoPessoas } from './../../models/fluxo-pessoas.models';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-detalhes-aparelhos',
@@ -21,8 +22,7 @@ import { Component, OnInit, Output } from '@angular/core';
 })
 export class DetalhesAparelhosComponent implements OnInit {
 
-  
-
+  fluxo!: FluxoPessoas;
 
   searchOpen = 'closed';
   modalOpen = false;
