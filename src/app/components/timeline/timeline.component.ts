@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EChartsOption } from 'echarts';
+import { FluxoPessoasService } from 'src/app/service/fluxo-pessoas.service';
 
 @Component({
   selector: 'app-timeline',
@@ -10,7 +11,9 @@ export class TimelineComponent implements OnInit {
 
   option!: EChartsOption;
 
-  constructor() { }
+  constructor(
+    private fluxoPessoasService: FluxoPessoasService,
+  ) { }
 
   ngOnInit(): void {
     this.initData();
@@ -23,7 +26,9 @@ export class TimelineComponent implements OnInit {
       text: 'Fluxo'
     },
     tooltip: {},
-    legend: {},
+    legend: {
+      data: ['Fluxo', 'Pessoas']
+    },
     grid: {
       left: '3%',
       right: '4%',
@@ -48,50 +53,19 @@ export class TimelineComponent implements OnInit {
   mergeOptions!: EChartsOption;
 
   private initData() {
-    this.mergeOptions = {
-      series: [
-        {
-          data: [
-            {
-              value: 2,
-              itemStyle: {
-                color: '#008000'
-              }
-            },
-            {
-              value: 8,
-              itemStyle: {
-                color: '#a90000'
-              }
-            },
-            {
-              value: 6,
-              itemStyle: {
-                color: '#FFF000'
-              }
-            },
-            {
-              value: 7,
-              itemStyle: {
-                color: '#a90000'
-              }
-            },
-            {
-              value: 8,
-              itemStyle: {
-                color: '#008000'
-              }
-            },
-            {
-              value: 2,
-              itemStyle: {
-                color: '#008000'
-              }
-            },
-          ]
-        },
-      ]
-    };
+    this.getPessoasId();
   };
+
+  getPessoasId() {
+    this.fluxoPessoasService.getFluxoPessoasId().subscribe(
+      (data: any) => {
+        this.options.xAxis = {
+          type: 'category',
+          data: data
+        }
+        this.getPessoasId();
+      }
+    )
+  }
 
 }
