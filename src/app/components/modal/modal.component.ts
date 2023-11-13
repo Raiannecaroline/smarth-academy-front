@@ -1,8 +1,9 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { EChartsOption } from 'echarts';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { NgxEchartsDirective } from 'ngx-echarts';
 import * as echarts from 'echarts';
+import { Aparelhos } from 'src/app/models/aparelhos.models';
 
 @Component({
   selector: 'app-modal',
@@ -11,6 +12,8 @@ import * as echarts from 'echarts';
 })
 export class ModalComponent implements OnInit {
   @Output() close = new EventEmitter<void>();
+
+  @Input() aparelho: Aparelhos[] = [];
 
   constructor() { }
 
