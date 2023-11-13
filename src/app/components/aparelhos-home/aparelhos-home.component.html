@@ -12,14 +12,11 @@
           <h4 class="text-2xl font-semibold">Aparelhos em Uso</h4>
           <p class="subtitle-group text-gray-600">Nas últimas horas</p>
         </div>
-        <div echarts [options]="chartOptions" class="chart">
+        <div echarts [options]="options" id="chart-container">
           <div *ngFor="let item of aparelho">
-            <a routerLink="/aparelhos" routerLinkActive="active" ariaCurrentWhenActive="page">
-              {{ item }}
-            </a>
+            {{ item }}
           </div>
         </div>
-
       </div>
     </div>
 
