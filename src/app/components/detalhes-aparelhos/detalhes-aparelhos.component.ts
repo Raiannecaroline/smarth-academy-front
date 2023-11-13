@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-detalhes-aparelhos',
@@ -20,6 +20,8 @@ import { Component, OnInit } from '@angular/core';
   ],
 })
 export class DetalhesAparelhosComponent implements OnInit {
+
+  
 
 
   searchOpen = 'closed';

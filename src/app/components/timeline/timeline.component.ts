@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { EChartsOption } from 'echarts';
-import { FluxoPessoasService } from 'src/app/service/fluxo-pessoas.service';
 
 @Component({
   selector: 'app-timeline',
@@ -11,12 +10,9 @@ export class TimelineComponent implements OnInit {
 
   option!: EChartsOption;
 
-  constructor(
-    private fluxoPessoasService: FluxoPessoasService,
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.initData();
   }
 
 
@@ -25,9 +21,11 @@ export class TimelineComponent implements OnInit {
     title: {
       text: 'Fluxo'
     },
-    tooltip: {},
+    tooltip: {
+      trigger: 'axis'
+    },
     legend: {
-      data: ['Fluxo', 'Pessoas']
+      data: ['Horários', 'Pessoas']
     },
     grid: {
       left: '3%',
@@ -42,30 +40,32 @@ export class TimelineComponent implements OnInit {
     },
     xAxis: {
       type: 'category',
+      boundaryGap: false,
+      data: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']
     },
-    yAxis: {},
+    yAxis: {
+      type: 'value',
+      min: 0,
+      interval: 50,
+      max: 150
+
+    },
     series: [
-      {  type: 'line' },
-      { type: 'line',},
+
+      {
+        name: 'Horários',
+        type: 'line',
+        stack: 'Total',
+        data: [18, 19, 20, 22, 19, 18]
+      },
+      {
+        name: 'Pessoas',
+        type: 'line',
+        stack: 'Total',
+        data: [30, 50, 57, 82, 110, 66]
+      },
     ]
   };
 
-  mergeOptions!: EChartsOption;
-
-  private initData() {
-    this.getPessoasId();
-  };
-
-  getPessoasId() {
-    this.fluxoPessoasService.getFluxoPessoasId().subscribe(
-      (data: any) => {
-        this.options.xAxis = {
-          type: 'category',
-          data: data
-        }
-        this.getPessoasId();
-      }
-    )
-  }
 
 }
