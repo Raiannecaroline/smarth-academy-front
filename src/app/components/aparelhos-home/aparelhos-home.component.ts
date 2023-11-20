@@ -10,45 +10,19 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-aparelhos-home',
   templateUrl: './aparelhos-home.component.html',
-  styleUrls: ['./aparelhos-home.component.css']
+  styleUrls: ['./aparelhos-home.component.css'],
 })
 
 export class AparelhosHomeComponent implements OnInit {
 
-  aparelho: Aparelhos[] = [];
-  options!: EChartsOption;
+  aparelho: number[] = [];
+  option!: EChartsOption;
+  mergeOptions!: EChartsOption;
 
-  option: EChartsOption = {
+  options: EChartsOption = {
     tooltip: {},
     legend: {},
-    series: [
-      {
-        name: 'Fluxo',
-        type: 'pie',
-        radius: ['40%', '70%'],
-        avoidLabelOverlap: false,
-        itemStyle: {
-          borderRadius: 10,
-          borderColor: '#fff',
-          borderWidth: 2
-        },
-        label: {
-          show: false,
-          position: 'center'
-        },
-        emphasis: {
-          label: {
-            show: true,
-            fontSize: 40,
-            fontWeight: 'bold'
-          }
-        },
-        labelLine: {
-          show: false
-        },
-        data: []
-      }
-    ]
+    series: [{ name: "Fluxo", type: "pie", data: [] }]
   };
 
 
@@ -63,30 +37,18 @@ export class AparelhosHomeComponent implements OnInit {
 
   getAparelhos(id: number) {
     this.aparelhosService.getAparelhosId(id).subscribe(
-      (data: Aparelhos) => {
-        this.aparelho = [data];
-        // console.log(this.aparelho);
+      (data: number[]) => {
+        this.aparelho = [...data];
+        // Adicione isso no método getAparelhos após atribuir this.aparelho
+        console.log('Aparelho:', this.aparelho);
+        this.initData();
       },
     );
   }
 
   initData() {
-    this.option.angleAxis = [];
-    this.aparelho.forEach((item) => {
-      this.aparelho.push({
-        angleAxis: item.id,
-        radiusAxis: item.id,
-        series: [
-          {
-            type: 'pie',
-            data: [
-              { value: item.id, name: 'Fluxo' },
-            ]
-          }
-        ]
-      } as any);
-    });
-  }
+    this.mergeOptions = { series: [{ name: "Fluxo", type: "pie", data: [{ value: this.aparelho[0], name: "Fluxo"}] }]}
+  };
 
 
 }

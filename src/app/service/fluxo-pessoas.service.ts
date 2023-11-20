@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 // import { FluxoPessoas } from '../models/fluxo-pessoas.models';
 
-const baseUrl = 'http://25.1.53.156:8022/fluxo'
+const baseUrl = 'http://25.38.142.101:8022/fluxo'
 
 @Injectable({
   providedIn: 'root'

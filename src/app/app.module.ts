@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { HomeComponent } from './components/pages/home/home.component';
 import { LoginComponent } from './components/pages/login/login.component';
-import { AparelhosHomeComponent } from './components/aparelhos-home/aparelhos-home.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { FluxoPessoasComponent } from './components/fluxo-pessoas/fluxo-pessoas.component';
 import { NavComponent } from './components/nav/nav.component';
@@ -17,15 +16,14 @@ import { ParceirosComponent } from './components/parceiros/parceiros.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetalhesAparelhosComponent } from './components/detalhes-aparelhos/detalhes-aparelhos.component';
 import { DetalhesEspecialistasComponent } from './components/detalhes-especialistas/detalhes-especialistas.component';
-import { ModalComponent } from './components/modal/modal.component';
 import { ModalModule } from './components/modal/modal.module';
+import { AparelhosHomeModule } from './components/aparelhos-home/aparelhos-home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    AparelhosHomeComponent,
     TimelineComponent,
     FluxoPessoasComponent,
     NavComponent,
@@ -44,6 +42,7 @@ import { ModalModule } from './components/modal/modal.module';
       echarts: () => import('echarts'),
     }),
     ModalModule,
+    AparelhosHomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
