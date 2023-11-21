@@ -50,9 +50,9 @@ Temos o prazer de apresentar a Smart Academy, a evolução da academia 📱
 
 No momento apenas existe a versão 1.0
 
-## Configurando o Ambiente 📄
+# Configurando o Ambiente 📄
 
-### Passo a Passo 🐢
+## Passo a Passo 🐢
 
 1. Baixar NodeJS (Caso não tenha)
 
@@ -63,4 +63,87 @@ No momento apenas existe a versão 1.0
 
 - npm install -g @angular/cli
 
-3.
+3. Após esses passos, basta abrir a aplicação com alguma IDE (De suas preferência)
+
+- Dê um 'npm install' (baixar as dependências do projeto)
+- Dê um 'ng serve' (rodar o projeto)
+
+4. Após isso, instale o Tailwind, caso não consiga rodar o projeto sem o framework
+
+- Dê via NPM no terminal: 'npm install -D tailwindcss postcss autoprefixer' e depois o 'npx tailwindcss init'
+
+Configure o arquivo 'tailwind.config.js':
+
+```json
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{html,ts}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+```
+
+Coloque no arquivo 'style.css':
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+5. Rode normalmente o Angular novamente:
+
+- Dê um 'ng serve'
+
+## Pré-requisitos
+
+- Node.js
+- NPM ou Yarn
+
+# Intalação (Dito anteriormente com mais detalhes acima)
+
+## Clonar o repositório
+
+git clone https://github.com/seu-usuario/seu-projeto.git
+
+## Navegar para o diretório do projeto
+
+cd seu-projeto
+
+## Instalar dependências
+
+npm install
+
+## Estrutura de Diretórios
+
+Explicação da estrutura de diretórios do projeto front-end.
+
+```json
+
+src/
+|-- components/
+|-- styles/
+|-- views/
+|-- assets/
+|-- App.js
+|-- index.js
+
+```
+
+# Uso
+
+Demonstrar como iniciar o servidor de desenvolvimento, construir a aplicação e qualquer outro comando relevante.
+
+## Iniciar servidor de desenvolvimento
+
+- npm start
+
+## Construir aplicação para produção
+
+- npm run build
