@@ -46,5 +46,21 @@ Temos o prazer de apresentar a Smart Academy, a evolução da academia 📱
 
 </p>
 
+## Depedências ⌨️
 
-## Dep
+No momento apenas existe a versão 1.0
+
+## Configurando o Ambiente 📄
+
+### Passo a Passo 🐢
+
+1. Baixar NodeJS (Caso não tenha)
+
+- Entre na aba procurar (🪟 + R) e coloque 'cmd' ou procure por Power Shell na aba de pesquisar
+- Coloque node -v, se tiver instalado vai apoarecer a versão, caso não, baixe o NodeJS (https://nodejs.org/en/download)
+
+2. Instalar o Angular (Caso não tenha)
+
+- npm install -g @angular/cli
+
+3.
